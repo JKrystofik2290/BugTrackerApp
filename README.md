@@ -1,2 +1,2 @@
-# Bug_Tracker
+# Bug Tracker
 Blazor app for tracking bugs
