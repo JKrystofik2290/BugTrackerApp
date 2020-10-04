@@ -3,20 +3,32 @@
 @using BugTracker.Services
 @inherits OwningComponentBase<UserService>
 
-<h3>Users</h3>
+<h3>Users Table:</h3>
 
-
-@foreach (var user in uc)
-{
-    <p>@user.name</p>
-}
+<table class="table">
+    <tr>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>User Password</th>
+        <th>User Type</th>
+    </tr>
+    @foreach (var user in userList)
+    {
+        <tr>
+            <td>@user.id</td>
+            <td>@user.name</td>
+            <td>@user.password</td>
+            <td>@user.type</td>
+        </tr>
+    }
+</table>
 
 
 @code {
-    public System.Collections.Generic.IList<UsersClass> uc;
+    public System.Collections.Generic.IList<UsersClass> userList;
 
     protected override void OnInitialized()
     {
-        uc = Service.displayusers();
+        userList = Service.GetAllUsers();
     }
 }
