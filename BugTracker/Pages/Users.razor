@@ -84,6 +84,7 @@
     {
         userobj.id = 0;
         Service.AddUser(userobj);
+        userobj = new UsersClass();
         userList = Service.GetAllUsers();
     }
 }
