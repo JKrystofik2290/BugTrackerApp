@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PFVigKYLj6k8L/cpG5N3kn7ve6kmbvSE+DXIM5eiUljl7TTX9STseO2i7cBQpRA2Y0KqwmYg5nPYcbV7U2Sz4w==",
+  "dgSpecHash": "MLATCdaHKpB8yxHvQXxK+M6/IzOwttRH2dVDQR1SjtTgtVrzQyirleVanUvf4u+pddGlhOz9HOBLaVVVrcctng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Joe\\source\\repos\\BugTracker\\BugTracker.csproj",
+  "projectFilePath": "C:\\Users\\Joe\\Source\\Repos\\BugTrackerApp\\BugTracker\\BugTracker.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

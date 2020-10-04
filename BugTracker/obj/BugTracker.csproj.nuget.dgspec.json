@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joe\\source\\repos\\BugTracker\\BugTracker.csproj": {}
+    "C:\\Users\\Joe\\Source\\Repos\\BugTrackerApp\\BugTracker\\BugTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joe\\source\\repos\\BugTracker\\BugTracker.csproj": {
+    "C:\\Users\\Joe\\Source\\Repos\\BugTrackerApp\\BugTracker\\BugTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joe\\source\\repos\\BugTracker\\BugTracker.csproj",
+        "projectUniqueName": "C:\\Users\\Joe\\Source\\Repos\\BugTrackerApp\\BugTracker\\BugTracker.csproj",
         "projectName": "BugTracker",
-        "projectPath": "C:\\Users\\Joe\\source\\repos\\BugTracker\\BugTracker.csproj",
+        "projectPath": "C:\\Users\\Joe\\Source\\Repos\\BugTrackerApp\\BugTracker\\BugTracker.csproj",
         "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joe\\source\\repos\\BugTracker\\obj\\",
+        "outputPath": "C:\\Users\\Joe\\Source\\Repos\\BugTrackerApp\\BugTracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Joe\\AppData\\Roaming\\NuGet\\NuGet.Config",
