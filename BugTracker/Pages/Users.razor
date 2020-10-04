@@ -5,6 +5,45 @@
 
 <h3>Users Table:</h3>
 
+<button class="btn-primary" @onclick="Togglepopup">New User</button>
+@if (popup)
+{
+    <div class="modal" tabindex="-1" role="dialog" style="display:block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" @onclick="Togglepopup">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <EditForm Model="userobj" OnValidSubmit="CreateUser">
+                    <div class="modal-body">
+                        <table class="table">
+                            <tr>
+                                <td>Username</td>
+                                <td><input type="text" placeholder="Username" @bind="userobj.name" /></td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td><input type="text" placeholder="Password" @bind="userobj.password" /></td>
+                            </tr>
+                            <tr>
+                                <td>User Access level</td>
+                                <td><input type="text" placeholder="type" @bind="userobj.type" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" @onclick="Togglepopup">Add User</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="Togglepopup">Close</button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+}
+
 <table class="table">
     <tr>
         <th>User Id</th>
@@ -27,8 +66,24 @@
 @code {
     public System.Collections.Generic.IList<UsersClass> userList;
 
+    UsersClass userobj = new UsersClass();
+
+    bool popup = false;
+
+    void Togglepopup()
+    {
+        popup = !popup;
+    }
+
     protected override void OnInitialized()
     {
+        userList = Service.GetAllUsers();
+    }
+
+    void CreateUser()
+    {
+        userobj.id = 0;
+        Service.AddUser(userobj);
         userList = Service.GetAllUsers();
     }
 }

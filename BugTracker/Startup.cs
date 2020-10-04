@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using BugTracker.Data;
 using Microsoft.EntityFrameworkCore;
+using BugTracker.Data;
 using BugTracker.Services;
 
 namespace BugTracker
@@ -31,7 +31,6 @@ namespace BugTracker
             services.AddDbContext<AppDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DbConnection")));
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddScoped<UserService>();
         }
 
