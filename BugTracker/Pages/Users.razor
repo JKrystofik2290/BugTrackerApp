@@ -1,0 +1,22 @@
+﻿@page "/DatabaseData"
+@using BugTracker.Data
+@using BugTracker.Services
+@inherits OwningComponentBase<UserService>
+
+<h3>Users</h3>
+
+
+@foreach (var user in uc)
+{
+    <p>@user.name</p>
+}
+
+
+@code {
+    public System.Collections.Generic.IList<UsersClass> uc;
+
+    protected override void OnInitialized()
+    {
+        uc = Service.displayusers();
+    }
+}
